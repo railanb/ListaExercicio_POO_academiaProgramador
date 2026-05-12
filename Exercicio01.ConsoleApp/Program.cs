@@ -1,22 +1,24 @@
-﻿Console.Clear();
-Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine("╔══════════════╗");
-Console.WriteLine("║   SISTEMA    ║");
-Console.WriteLine("╚══════════════╝");
+﻿// Crie um programa para calcular o volume de uma caixa retangular
+// COMPRIMENTO * LARGURA * ALTURA.
 
-Console.ResetColor();
+using Exercicio01.ConsoleApp;
 
-Console.ForegroundColor = ConsoleColor.Red;
-Console.WriteLine("╔══════════════╗");
-Console.WriteLine("║   SISTEMA    ║");
-Console.WriteLine("╚══════════════╝");
+CaixaRetangular caixa = new CaixaRetangular();
+caixa.altura = 60;
+caixa.largura = 50;
+caixa.comprimento = 80;
 
-Console.ResetColor();
+Console.Clear();
 
 Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("╔══════════════╗");
-Console.WriteLine("║   SISTEMA    ║");
-Console.WriteLine("╚══════════════╝");
+Console.WriteLine("╔════════════════════════════╗");
+Console.WriteLine("║   CALCULADORA DE VOLUME    ║");
+Console.WriteLine("╚════════════════════════════╝");
+
+
+decimal volumeCaixa =  caixa.ObrterVolume();
+Console.WriteLine($"=> O volume do seu retangulo: {volumeCaixa:F2} cm³");
 
 Console.ResetColor();
+
 Console.ReadLine();
